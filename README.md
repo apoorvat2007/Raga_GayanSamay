@@ -1,4 +1,4 @@
-#Can a rule-based system encoding music theory beat or match ML at predicting raga samay, and where do both fail?
+# Can a rule-based Hindustani music theory function beat or match ML at predicting raga samay, and where do both fail?
 
 **Functions (Algorithm) made by me using rules of Pandit Bhatkahnde's Raga Samay Theory** 
 
