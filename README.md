@@ -14,3 +14,7 @@ rules.py (version 1): if else logic,has bad accuracy. Accuracy of this ver.= 13.
 
 <img width="187" height="121" alt="image" src="https://github.com/user-attachments/assets/2b4df89a-43ce-40e9-b44b-df1e3be21ba8" />
 
+rules.py (version 2): tightened the "and" and "or" logic in if else statements. Accuracy increase noted +6.67
+
+<img width="125" height="16" alt="image" src="https://github.com/user-attachments/assets/82835216-6117-4958-896a-ca25c9ae18a1" />
+
