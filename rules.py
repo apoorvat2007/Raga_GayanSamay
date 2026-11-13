@@ -5,9 +5,9 @@ def gayan_samay_predictor(row):
     #dividing into 3 main categories
     category=None
     predicted_prahar=None
-    if (row['Re_komal']==1) and (row['Dha_komal']==1)and (row['Ga_komal']==0) and (row['Ni_komal']==0) :
+    if (row['Re_komal']==1) or (row['Dha_komal']==1) and ((row['Ga_komal']==0) or (row['Ni_komal']==0)) :
         category=1 #sandhiprkash
-    elif (row['Re_shuddha']==1) and (row['Dha_shuddha']==1)and (row['Ga_komal']==0):
+    elif ((row['Re_shuddha']==1) or (row['Dha_shuddha']==1))and (row['Ga_komal']==0):
         category=2 #7 to 10 pm or am
     elif (row['Ga_komal']==1) and (row['Ni_komal']==1):
         category=3 #10 to 4 am pm
@@ -44,15 +44,17 @@ def gayan_samay_predictor(row):
             
     return predicted_prahar
 
+ragas['Rule_Prediction']=ragas.apply(gayan_samay_predictor,axis=1)
+for i in range(len(ragas)):
+    raga=ragas.iloc[i]['Raga']
+    actual=ragas.iloc[i]['Gayan Samay']
+    prediction=ragas.iloc[i]['Rule_Prediction']
+    if actual==prediction:
+        result='correct'
+    else:
+        result='wrong'
+    print(raga,actual,prediction,result)
 
-ragas['Rule_Prediction'] = ragas.apply(
-    gayan_samay_predictor,
-    axis=1
-)
-
-print(
-    ragas[['Raga', 'Gayan Samay', 'Rule_Prediction']]
-)
 
 correct = 0
 
