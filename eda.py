@@ -1,0 +1,10 @@
+import pandas as pd
+Ragas=pd.read_csv('data/61_Raga_Dataset.csv')
+print(Ragas.info())
+counts=Ragas['Gayan Samay'].value_counts()
+print(counts)
+print(Ragas.isnull().sum())
+Ragas.fillna(0,inplace=True)
+Ragas.to_csv('data/61_Raga_Dataset.csv', index=False)
+print(Ragas.isnull().sum())
+print(pd.crosstab(Ragas['Gayan Samay'],Ragas['Thaat']))
