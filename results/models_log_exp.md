@@ -22,3 +22,9 @@ Limitations-
 1. As the training data accuracy is more than the testing data, there is slight overfitting risk here. Hence, generilization gap can be seen.
 
 2.  No crossvalidation done yet.
+
+**Experiment 2:(20/11/2026) Performed 3-Fold Stratified Calssification**
+
+n_repeats=20
+Checked cross validation score by cross_val_score method
+Got an average accuracy of 52.32%, standard deviation being 8.15 
