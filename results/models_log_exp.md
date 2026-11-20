@@ -26,5 +26,9 @@ Limitations-
 **Experiment 2:(20/11/2026) Performed 3-Fold Stratified Calssification**
 
 n_repeats=20
+
 Checked cross validation score by cross_val_score method
+
 Got an average accuracy of 52.32%, standard deviation being 8.15 
+
+<img width="338" height="176" alt="image" src="https://github.com/user-attachments/assets/8df0c217-06dc-45d7-ad2d-79036236712a" />
